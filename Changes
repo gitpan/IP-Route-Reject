@@ -6,4 +6,4 @@ Revision history for Perl module IP::Route::Reject
 
 0.2 documentation and requirements (Build.PL /Makefile.PL) change . This module uses IPC::Cmd not IPC::Run
 
-
+0.3 Fix variable declarations and add some checking. Tests changed , this is only used as class methods.

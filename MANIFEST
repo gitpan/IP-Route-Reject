@@ -4,6 +4,7 @@ README
 Todo
 Changes
 lib/IP/Route/Reject.pm
-t/001_load.t
+t/001_add.t
+t/002_del.t
 Build.PL
 META.yml
