@@ -7,7 +7,7 @@ use CLASS;
 BEGIN {
 	use Exporter ();
 	use vars qw ($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-	$VERSION     = 0.1;
+	$VERSION     = 0.2;
 	@ISA         = qw (Exporter);
 	#Give a hoot don't pollute, do not export more than needed by default
 	@EXPORT      = qw ();
@@ -21,11 +21,11 @@ BEGIN {
 
 =head1 NAME
 
-IP::Route::Reject - Perl module for adding/removing reject routes
+Net::IP::Route::Reject - Perl module for adding/removing reject routes
 
 =head1 SYNOPSIS
 
-  use IP::Route::Reject
+  use Net::IP::Route::Reject
 
 
 =head1 DESCRIPTION
@@ -64,7 +64,7 @@ LICENSE file included with this module.
 
 =head1 SEE ALSO
 
-perl(1),IPC::Run.
+perl(1),IPC::Cmd.
 
 =cut
 
@@ -80,7 +80,7 @@ my $ipv4regex = "/^".$ipv4octetregex."\.".$ipv4octetregex."\.".$ipv4octetregex."
 
 =head2 add
 
- Usage     : IP::Route::Reject->add('192.168.1.1')
+ Usage     : Net::IP::Route::Reject->add('192.168.1.1')
  Purpose   : adds a reject route for the given host from the route table of the host running this
  Returns   : nothing
  Argument  : takes one parameter, a numerical IPv4 address in dotted quad form
@@ -88,7 +88,7 @@ my $ipv4regex = "/^".$ipv4octetregex."\.".$ipv4octetregex."\.".$ipv4octetregex."
  Comments  : 
 
 
-See Also   : IP::Route::Reject->del
+See Also   : Net::IP::Route::Reject->del
 
 =cut
 
@@ -101,7 +101,7 @@ sub add {
 
 =head2 del
 
- Usage     : IP::Route::Reject->del('192.168.1.1')
+ Usage     : Net::IP::Route::Reject->del('192.168.1.1')
  Purpose   : removes the reject route for the given host from the route table of the host running this
  Returns   : nothing
  Argument  : takes one parameter, a numerical IPv4 address in dotted quad form
@@ -109,7 +109,7 @@ sub add {
  Comments  : 
 
 
-See Also   : IP::Route::Reject->add
+See Also   : Net::IP::Route::Reject->add
 
 =cut
 
@@ -130,7 +130,7 @@ sub del {
  Throws    : 
  Comments  : This is a private function to avoid checking for bogus operation types
 
-See Also   : IPC::Run
+See Also   : IPC::Cmd:
 
 =cut
 

@@ -1,15 +1,14 @@
 --- #YAML:1.0
 name: IP-Route-Reject
-version: 0.1
+version: 0.2
+author:
+  - ~
+abstract: Perl module for adding/removing reject routes
 license: artistic
-distribution_type: module
 requires:
-  IPC::Run: 0.77
-recommends: {}
-build_requires: {}
-conflicts: {}
+  IPC::Cmd: 0.04
 provides:
   IP::Route::Reject:
     file: lib/IP/Route/Reject.pm
-    version: 0.1
-generated_by: Module::Build version 0.21
+    version: 0.2
+generated_by: Module::Build version 0.24
